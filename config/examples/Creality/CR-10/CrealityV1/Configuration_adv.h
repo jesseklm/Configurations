@@ -1190,7 +1190,7 @@
 
   // Add Probe Z Offset calibration to the Z Probe Offsets menu
   #if HAS_BED_PROBE
-    //#define PROBE_OFFSET_WIZARD
+    #define PROBE_OFFSET_WIZARD
     #if ENABLED(PROBE_OFFSET_WIZARD)
       //
       // Enable to init the Probe Z-Offset when starting the Wizard.
@@ -1869,10 +1869,10 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   //#define EXTRA_LIN_ADVANCE_K // Enable for second linear advance constants
-  #define LIN_ADVANCE_K 0.22    // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.9     // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // If enabled, this will generate debug information output over USB.
   //#define EXPERIMENTAL_SCURVE // Enable this option to permit S-Curve Acceleration
 #endif
@@ -3789,9 +3789,9 @@
  * Host Prompt Support enables Marlin to use the host for user prompts so
  * filament runout and other processes can be managed from the host side.
  */
-//#define HOST_ACTION_COMMANDS
+#define HOST_ACTION_COMMANDS
 #if ENABLED(HOST_ACTION_COMMANDS)
-  //#define HOST_PROMPT_SUPPORT
+  #define HOST_PROMPT_SUPPORT
   //#define HOST_START_MENU_ITEM  // Add a menu item that tells the host to start
 #endif
 
